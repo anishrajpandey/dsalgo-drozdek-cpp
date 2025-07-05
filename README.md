@@ -8,6 +8,7 @@ This repository documents my journey to mastering foundational and advanced algo
 ## 🎯 Goal
 
 To build a strong understanding of data structures and algorithms through:
+
 - Daily hands-on practice
 - Clean C++ implementations
 - Consistent commitment
@@ -29,24 +30,24 @@ This is part of my personal **#AttackMode** — discipline, no shortcuts.
 
 ## 🧭 Roadmap (Based on Book Chapters)
 
-| #  | Topic                                      | Status         | Date Started |
-|----|--------------------------------------------|----------------|--------------|
-| 01 | Object-Oriented Programming Using C++      | ✅  Completed  |  06/02/2025  |
-| 02 | Complexity Analysis                        | ✅  Completed  | 06/15/2025   |
-| 03 | Linked Lists                               | 📖 In Progress |07/01/2025    |
-| 04 | Stacks and Queues                          | 🔲 Not Started | --           |
-| 05 | Recursion                                  | 🔲 Not Started | --           |
-| 06 | Binary Trees                               | 🔲 Not Started | --           |
-| 07 | Multiway Trees                             | 🔲 Not Started | --           |
-| 08 | Graphs                                     | 🔲 Not Started | --           |
-| 09 | Sorting                                    | 🔲 Not Started | --           |
-| 10 | Hashing                                    | 🔲 Not Started | --           |
-| 11 | Data Compression                           | 🔲 Not Started | --           |
-| 12 | Memory Management                          | 🔲 Not Started | --           |
-| 13 | String Matching                            | 🔲 Not Started | --           |
-| 14 | Computing BIG-O (Appendix)                 | 🔲 Not Started | --           |
-| 15 | Algorithms in the STL                      | 🔲 Not Started | --           |
-| 16 | NP-Completeness                            | 🔲 Not Started | --           |
+| #   | Topic                                 | Status         | Date Started |
+| --- | ------------------------------------- | -------------- | ------------ |
+| 01  | Object-Oriented Programming Using C++ | ✅ Completed   | 06/02/2025   |
+| 02  | Complexity Analysis                   | ✅ Completed   | 06/15/2025   |
+| 03  | Linked Lists                          | 📖 In Progress | 07/01/2025   |
+| 04  | Stacks and Queues                     | 🔲 Not Started | --           |
+| 05  | Recursion                             | 🔲 Not Started | --           |
+| 06  | Binary Trees                          | 🔲 Not Started | --           |
+| 07  | Multiway Trees                        | 🔲 Not Started | --           |
+| 08  | Graphs                                | 🔲 Not Started | --           |
+| 09  | Sorting                               | 🔲 Not Started | --           |
+| 10  | Hashing                               | 🔲 Not Started | --           |
+| 11  | Data Compression                      | 🔲 Not Started | --           |
+| 12  | Memory Management                     | 🔲 Not Started | --           |
+| 13  | String Matching                       | 🔲 Not Started | --           |
+| 14  | Computing BIG-O (Appendix)            | 🔲 Not Started | --           |
+| 15  | Algorithms in the STL                 | 🔲 Not Started | --           |
+| 16  | NP-Completeness                       | 🔲 Not Started | --           |
 
 > ✅ = Completed 📖 = In Progress 🔲 = Not Started
 
@@ -73,3 +74,4 @@ This is part of my personal **#AttackMode** — discipline, no shortcuts.
 ├── 15_STL_Algorithms/
 ├── 16_NP_Completeness/
 ├── README.md
+```
