@@ -1,65 +1,75 @@
-
 # 📘 Data Structures and Algorithms in C++ – Daily Practice
 
-Welcome to my personal journey of mastering Data Structures and Algorithms (DSA) using **“Data Structures and Algorithms in C++” by Adam Drozdek**.  
-This repository is my daily log, practice space, and a commitment to consistency and growth as a Computer Science student.
+Welcome to my daily DSA grind using **“Data Structures and Algorithms in C++” by Adam Drozdek**.  
+This repository documents my journey to mastering foundational and advanced algorithms in C++, one concept at a time.
 
 ---
 
 ## 🎯 Goal
 
-To deeply understand core data structures and algorithms in C++ through **daily coding, note-taking, and reflection**, with the ultimate goal of becoming interview-ready and academically sharp.
+To build a strong understanding of data structures and algorithms through:
+- Daily hands-on practice
+- Clean C++ implementations
+- Consistent commitment
+- Building a strong foundation for interviews, coding challenges, and real-world problem solving
 
 ---
 
 ## 🔥 Daily Commitment
 
-- ✅ Study one concept or section from the book daily.
-- ✅ Implement the concept/code in C++.
-- ✅ Write clean, well-commented, readable code.
-- ✅ Reflect in notes or add comments on key takeaways.
-- ✅ Commit to this repo **every single day** — no zero days.
+- 📖 Read 1 topic or section from the book
+- 🧠 Understand and summarize key ideas
+- 💻 Implement the concept in C++
+- 🗒️ Add comments, notes, and examples
+- ✅ Push at least one commit daily
+
+This is part of my personal **#AttackMode** — discipline, no shortcuts.
 
 ---
 
-## 📆 Progress Tracker
+## 🧭 Roadmap (Based on Book Chapters)
 
-| Date       | Topic / Chapter                          | Status     |
-|------------|------------------------------------------|------------|
-| 2025-07-05 | Chapter 1: Basic Concepts                | ✅ Done     |
-| 2025-07-06 | Chapter 2: Object-Oriented Programming   | ✅ Done     |
-| ...        | ...                                      | ...        |
+| #  | Topic                                      | Status         | Date Started |
+|----|--------------------------------------------|----------------|--------------|
+| 01 | Object-Oriented Programming Using C++      | ✅  Completed  |  06/02/2025  |
+| 02 | Complexity Analysis                        | ✅  Completed  | 06/15/2025   |
+| 03 | Linked Lists                               | 📖 In Progress |07/01/2025    |
+| 04 | Stacks and Queues                          | 🔲 Not Started | --           |
+| 05 | Recursion                                  | 🔲 Not Started | --           |
+| 06 | Binary Trees                               | 🔲 Not Started | --           |
+| 07 | Multiway Trees                             | 🔲 Not Started | --           |
+| 08 | Graphs                                     | 🔲 Not Started | --           |
+| 09 | Sorting                                    | 🔲 Not Started | --           |
+| 10 | Hashing                                    | 🔲 Not Started | --           |
+| 11 | Data Compression                           | 🔲 Not Started | --           |
+| 12 | Memory Management                          | 🔲 Not Started | --           |
+| 13 | String Matching                            | 🔲 Not Started | --           |
+| 14 | Computing BIG-O (Appendix)                 | 🔲 Not Started | --           |
+| 15 | Algorithms in the STL                      | 🔲 Not Started | --           |
+| 16 | NP-Completeness                            | 🔲 Not Started | --           |
 
-*(Update this daily — it keeps you accountable.)*
-
----
-
-## 📚 Book Reference
-
-- **Title:** Data Structures and Algorithms in C++  
-- **Author:** Adam Drozdek  
-
-
----
-
-## ✨ Why I'm Doing This
-
-As a CS undergrad from Nepal studying in the U.S., I want to:
-- Build a rock-solid foundation in DSA.
-- Level up my problem-solving and C++ skills.
-- Prepare for coding interviews and advanced topics.
-- Stay consistent and push myself through daily discipline.
-
-This is **#AttackMode** — no shortcuts, just grind. 💪
+> ✅ = Completed 📖 = In Progress 🔲 = Not Started
 
 ---
 
-## 🛠️ Structure
+## 🛠️ Project Structure
 
 ```bash
 .
-├── Chapter_01_Basics/
-├── Chapter_02_OOP/
-├── Chapter_03_Stacks_Queues/
-├── ...
+├── 01_OOP_Cpp/
+├── 02_Complexity_Analysis/
+├── 03_Linked_Lists/
+├── 04_Stacks_Queues/
+├── 05_Recursion/
+├── 06_Binary_Trees/
+├── 07_Multiway_Trees/
+├── 08_Graphs/
+├── 09_Sorting/
+├── 10_Hashing/
+├── 11_Data_Compression/
+├── 12_Memory_Management/
+├── 13_String_Matching/
+├── 14_Appendix_BigO/
+├── 15_STL_Algorithms/
+├── 16_NP_Completeness/
 ├── README.md
