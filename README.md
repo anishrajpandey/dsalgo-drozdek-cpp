@@ -38,8 +38,7 @@ To deeply understand core data structures and algorithms in C++ through **daily 
 
 - **Title:** Data Structures and Algorithms in C++  
 - **Author:** Adam Drozdek  
-- **Edition:** [Add your edition here]  
-- **ISBN:** [Add ISBN if you want]
+
 
 ---
 
