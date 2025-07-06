@@ -139,26 +139,27 @@ void StudentLinkedList::deleteByID(int id)
 StudentNode *StudentLinkedList::searchByID(int id)
 {
     StudentNode *p = head;
-    if (p != nullptr)
+    while (p != nullptr)
     {
         if (p->id == id)
             return p;
         p = p->next;
     }
+    return nullptr;
 }
 int main()
 {
     StudentLinkedList Students;
 
-    Students.insertAtEnd(3, "Manita");
+    Students.insertAtEnd(3, "Manitae");
     Students.insertAtEnd(23, "Manita");
     Students.insertAtEnd(4, "Manita");
     Students.insertAtEnd(5, "Manitaqqqqq");
     Students.insertAtEnd(35, "Manita");
 
-    Students.deleteByID(35);
-    StudentNode *node = Students.searchByID(5);
-    cout << (*node).name << "found";
+    // Students.deleteByID(35);
+    StudentNode *node = Students.searchByID(3);
+    cout << node->name;
 
-    Students.display();
+    // Students.display();
 }
