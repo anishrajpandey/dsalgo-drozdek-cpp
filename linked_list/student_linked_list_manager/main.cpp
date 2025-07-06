@@ -107,21 +107,45 @@ void StudentLinkedList::insertAtPosition(int pos, int id, string name)
         }
         p = p->next;
     }
-    // todo handle for inserting at end position
+}
+
+void StudentLinkedList::deleteByID(int id)
+
+{
+    StudentNode *p = head;
+    StudentNode *n = nullptr;
+    if (isEmpty())
+        return;
+    if (id == head->id)
+    { // for first element found
+
+        head = head->next;
+
+        return;
+    }
+
+    while (p != nullptr)
+    {
+
+        if (p->id == id)
+        {
+            n->next = p->next;
+        }
+        n = p;
+        p = p->next;
+    }
 }
 int main()
 {
     StudentLinkedList Students;
 
     Students.insertAtEnd(3, "Manita");
-    Students.insertAtEnd(3, "Manita");
-    Students.insertAtEnd(3, "Manita");
-    Students.insertAtEnd(3, "Manita");
-    Students.insertAtEnd(3, "Manita");
-    Students.insertAtPosition(0, 2, "Anish");
+    Students.insertAtEnd(23, "Manita");
+    Students.insertAtEnd(4, "Manita");
+    Students.insertAtEnd(5, "Manita");
+    Students.insertAtEnd(35, "Manita");
 
-    Students.insertAtEnd(3, "Manita");
-    Students.insertAtEnd(3, "Manita");
+    Students.deleteByID(35);
 
     Students.display();
 }
