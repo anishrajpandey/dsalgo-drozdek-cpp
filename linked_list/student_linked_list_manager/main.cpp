@@ -111,8 +111,8 @@ void StudentLinkedList::insertAtPosition(int pos, int id, string name)
 void StudentLinkedList::deleteByID(int id)
 
 {
-    StudentNode *p = head;
-    StudentNode *n = nullptr;
+    StudentNode *p = head->next;
+    StudentNode *n = head;
     if (isEmpty())
         return;
     if (id == head->id)
@@ -129,6 +129,8 @@ void StudentLinkedList::deleteByID(int id)
         if (p->id == id)
         {
             n->next = p->next;
+            delete p;
+            return;
         }
         n = p;
         p = p->next;
