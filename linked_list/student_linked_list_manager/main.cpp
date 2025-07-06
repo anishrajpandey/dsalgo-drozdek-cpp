@@ -70,18 +70,58 @@ void StudentLinkedList::insertAtBeginning(int id, string name)
 
 void StudentLinkedList::insertAtEnd(int id, string name)
 {
-    StudentNode *p = head;
-    while (p->next != nullptr)
+    StudentNode *newNode = new StudentNode(id, name);
+    if (!isEmpty())
     {
-        p = p->next;
+        StudentNode *p = head;
+
+        while (p->next != nullptr)
+        {
+            p = p->next;
+        }
+
+        p->next = newNode;
+    }
+    else
+    {
+        head = newNode;
     }
 }
+void StudentLinkedList::insertAtPosition(int pos, int id, string name)
+{
+    StudentNode *newNode = new StudentNode(id, name);
+    StudentNode *p = head;
+    if (pos == 0)
+    {
+        newNode->next = head;
+        head = newNode;
+        return;
+    }
 
+    for (int index = 1; index <= pos && p != nullptr; index++)
+    {
+        if (index == pos)
+        {
+            newNode->next = p->next;
+            p->next = newNode;
+        }
+        p = p->next;
+    }
+    // todo handle for inserting at end position
+}
 int main()
 {
     StudentLinkedList Students;
-    // Students.insertAtBeginning(2, "Anish");
-    // Students.insertAtBeginning(3, "Manita");
+
+    Students.insertAtEnd(3, "Manita");
+    Students.insertAtEnd(3, "Manita");
+    Students.insertAtEnd(3, "Manita");
+    Students.insertAtEnd(3, "Manita");
+    Students.insertAtEnd(3, "Manita");
+    Students.insertAtPosition(0, 2, "Anish");
+
+    Students.insertAtEnd(3, "Manita");
+    Students.insertAtEnd(3, "Manita");
 
     Students.display();
 }
