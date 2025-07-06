@@ -27,7 +27,6 @@ public:
     void insertAtPosition(int pos, int id, string name);
     void deleteByID(int id);
     StudentNode *searchByID(int id);
-    void traverse();
     void reverse();
     bool isEmpty();
     void display();
@@ -147,19 +146,36 @@ StudentNode *StudentLinkedList::searchByID(int id)
     }
     return nullptr;
 }
+
+void StudentLinkedList::reverse()
+{
+    StudentNode *p = head, *n = nullptr, *temp = nullptr;
+    while (p != nullptr)
+    {
+        temp = p->next;
+        p->next = n;
+        n = p;
+        p = temp;
+    }
+    head = n;
+}
 int main()
 {
     StudentLinkedList Students;
 
-    Students.insertAtEnd(3, "Manitae");
-    Students.insertAtEnd(23, "Manita");
-    Students.insertAtEnd(4, "Manita");
-    Students.insertAtEnd(5, "Manitaqqqqq");
-    Students.insertAtEnd(35, "Manita");
-
+    Students.insertAtEnd(1, "a");
+    Students.insertAtEnd(2, "b");
+    Students.insertAtEnd(3, "c");
+    Students.insertAtEnd(4, "d");
+    Students.insertAtEnd(5, "e");
+    Students.display();
+    cout << endl
+         << endl
+         << endl;
     // Students.deleteByID(35);
-    StudentNode *node = Students.searchByID(3);
-    cout << node->name;
+    // StudentNode *node = Students.searchByID(3);
+    // cout << node->name;
+    Students.reverse();
 
-    // Students.display();
+    Students.display();
 }
