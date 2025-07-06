@@ -1,0 +1,87 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct StudentNode
+{
+    int id;
+    string name;
+    StudentNode *next;
+    StudentNode(int _id, string _name)
+    {
+        id = _id;
+        name = _name;
+        next = nullptr;
+    }
+};
+
+class StudentLinkedList
+{
+private:
+    StudentNode *head;
+
+public:
+    StudentLinkedList();
+    void insertAtBeginning(int id, string name);
+    void insertAtEnd(int id, string name);
+    void insertAtPosition(int pos, int id, string name);
+    void deleteByID(int id);
+    StudentNode *searchByID(int id);
+    void traverse();
+    void reverse();
+    bool isEmpty();
+    void display();
+};
+
+StudentLinkedList::StudentLinkedList()
+{
+    head = nullptr;
+}
+void StudentLinkedList::display()
+{
+    StudentNode *p = head;
+    while (p != nullptr)
+    {
+        cout << p->id << " " << p->name << endl;
+        p = p->next;
+    }
+}
+
+bool StudentLinkedList::isEmpty()
+{
+    return head == nullptr;
+}
+
+void StudentLinkedList::insertAtBeginning(int id, string name)
+{
+
+    StudentNode *student = new StudentNode(id, name);
+    if (isEmpty())
+    {
+        head = student;
+        student->next = nullptr;
+    }
+    else
+    {
+        student->next = head;
+        head = student;
+    }
+}
+
+void StudentLinkedList::insertAtEnd(int id, string name)
+{
+    StudentNode *p = head;
+    while (p->next != nullptr)
+    {
+        p = p->next;
+    }
+}
+
+int main()
+{
+    StudentLinkedList Students;
+    // Students.insertAtBeginning(2, "Anish");
+    // Students.insertAtBeginning(3, "Manita");
+
+    Students.display();
+}
