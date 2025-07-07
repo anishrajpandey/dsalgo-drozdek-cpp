@@ -25,6 +25,7 @@ void Browser::openTab(string title, string url)
         }
         p->next = newTab;
         newTab->prev = p;
+        current = p;
     }
 }
 void Browser::closeCurrentTab()
