@@ -16,4 +16,5 @@ int main()
     br.openTab("Medium", "medium.com");
 
     br.showAllTabs();
+    br.showCurrentTab();
 }

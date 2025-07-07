@@ -25,7 +25,7 @@ void Browser::openTab(string title, string url)
         }
         p->next = newTab;
         newTab->prev = p;
-        current = p;
+        current = newTab;
     }
 }
 void Browser::closeCurrentTab()
@@ -40,14 +40,19 @@ void Browser::movePrev()
 void Browser::showAllTabs()
 {
     Tab *p = head;
+    cout << "Displaying all tabs" << endl;
     while (p != nullptr)
     {
         cout << p->title << " " << p->url << endl;
         p = p->next;
     }
+    cout << endl
+         << endl;
 }
 void Browser::showCurrentTab()
 {
+    cout << "Displaying Current Tab" << endl;
+    cout << current->title << "  " << current->url << endl;
 }
 bool Browser::isEmpty()
 {
