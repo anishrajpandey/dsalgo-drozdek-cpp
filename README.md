@@ -34,8 +34,8 @@ This is part of my personal **#AttackMode** — discipline, no shortcuts.
 | --- | ------------------------------------- | -------------- | ------------ |
 | 01  | Object-Oriented Programming Using C++ | ✅ Completed   | 06/02/2025   |
 | 02  | Complexity Analysis                   | ✅ Completed   | 06/15/2025   |
-| 03  | Linked Lists                          | 📖 In Progress | 07/01/2025   |
-| 04  | Stacks and Queues                     | 🔲 Not Started | --           |
+| 03  | Linked Lists                          | ✅ Completed   | 07/01/2025   |
+| 04  | Stacks and Queues                     | 📖 In Progress | 07/12/2025.  |
 | 05  | Recursion                             | 🔲 Not Started | --           |
 | 06  | Binary Trees                          | 🔲 Not Started | --           |
 | 07  | Multiway Trees                        | 🔲 Not Started | --           |
