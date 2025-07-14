@@ -3,16 +3,18 @@
 int sum(int n)
 {
     if (n == 0)
+    {
         return 0;
-
+    }
     return n + sum(n - 1);
 }
 
 int main()
 {
     int num;
-    printf("enter n");
-    scanf("%d", &num);
+    std::cout << "enter n: ";
+    std::cin >> num;
     int result = sum(num);
-    printf("%d", result);
+    std::cout << result << std::endl;
+    return 0;
 }
