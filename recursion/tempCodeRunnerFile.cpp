@@ -1,3 +1,1 @@
- // Added explicit return to satisfy all control paths
-    return 0;
-}
+ cout << map[n % 10];
