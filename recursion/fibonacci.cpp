@@ -10,5 +10,5 @@ int fibonacci(int n)
 
 int main()
 {
-    cout << fibonacci(8);
+    cout << fibonacci(4);
 }
