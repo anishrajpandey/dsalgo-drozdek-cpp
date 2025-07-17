@@ -3,11 +3,14 @@
 using namespace std;
 bool isSorted(const vector<int> &arr, int index = 0)
 {
-    if (index == arr.size())
+    if (index == arr.size() - 1)
     {
-        return arr[index];
+        return true;
     };
-    return (arr[index] <= isSorted(arr, index + 1));
+
+    if (arr[index] > arr[index + 1])
+        return false;
+    return isSorted(arr, index + 1);
 }
 
 int main()
