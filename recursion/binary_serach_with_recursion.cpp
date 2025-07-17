@@ -6,6 +6,8 @@ int binary_search(int arr[], int target, int left, int right)
     if (left > right)
         return -1; // base case: target not found
     int mid = (left + right) / 2;
+    if (arr[mid] == target)
+        return mid;
     if (target > arr[mid])
     {
         left = mid + 1;
