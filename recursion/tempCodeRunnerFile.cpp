@@ -1,1 +1,2 @@
- cout << map[n % 10];
+if (arr[mid] == target)
+    //     return mid;
