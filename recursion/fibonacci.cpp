@@ -12,3 +12,6 @@ int main()
 {
     cout << fibonacci(4);
 }
+
+// time complexity : O(2^n)
+// space complexity : O(n)
