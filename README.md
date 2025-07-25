@@ -36,8 +36,8 @@ This is part of my personal **#AttackMode** — discipline, no shortcuts.
 | 02  | Complexity Analysis                   | ✅ Completed   | 06/15/2025   |
 | 03  | Linked Lists                          | ✅ Completed   | 07/01/2025   |
 | 04  | Stacks and Queues                     | ✅ Completed   | 07/12/2025   |
-| 05  | Recursion                             | 📖 In Progress | 07/13/2025   |
-| 06  | Binary Trees                          | 🔲 Not Started | --           |
+| 05  | Recursion                             | ✅ Completed   | 07/13/2025   |
+| 06  | Binary Trees                          | 📖 In Progress | 07/24/2025   |
 | 07  | Multiway Trees                        | 🔲 Not Started | --           |
 | 08  | Graphs                                | 🔲 Not Started | --           |
 | 09  | Sorting                               | 🔲 Not Started | --           |
