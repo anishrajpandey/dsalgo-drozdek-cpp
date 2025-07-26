@@ -20,13 +20,15 @@ struct TreeNode
 
 TreeNode *createTree(vector<int> arr, int index)
 {
+    index++;
     if (index == arr.size())
         return nullptr;
+
     // for(int i=0;i<arr.size();i++){
     TreeNode *root = new TreeNode(arr[index]);
-    root->left = createTree(arr, index + 1);
+    root->left = createTree(arr, index);
 
-    root->right = createTree(arr, index + 2);
+    root->right = createTree(arr, index);
 
     return root;
 
