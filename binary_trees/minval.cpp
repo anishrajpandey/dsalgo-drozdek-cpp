@@ -1,6 +1,5 @@
 #include <iostream>
-#include <vector>
-#include <unordered_map>
+#include <math.h>
 using namespace std;
 
 struct TreeNode
@@ -13,10 +12,10 @@ struct TreeNode
 int TraverseDFS(TreeNode *root)
 {
     if (root == nullptr)
-        return 0;
+        return INFINITY;
 
-    int leftSum = TraverseDFS(root->left);
-    int rightSum = TraverseDFS(root->right);
+    int left = TraverseDFS(root->left);
+    int right = TraverseDFS(root->right);
 
-    return leftSum + rightSum + root->val;
+    return left < right ? left : right;
 }
