@@ -1,1 +1,1 @@
-subStr;
+insertHelper(root, node);

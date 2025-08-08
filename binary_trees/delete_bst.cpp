@@ -17,15 +17,32 @@ struct TreeNode
 
 TreeNode *deleteNode(TreeNode *root, int val)
 {
-    if (root == nullptr)
-        delete root;
+    if (root->left == nullptr && root->right == nullptr)
+    {
+        if (root->val == val)
+        {
+            delete root;
+        }
+        return;
+    }
+
+    if (root->left == nullptr && root->right != nullptr)
+    {
+        if (root->right->val == val)
+        {
+            // root->right = root->right->;
+        }
+        return;
+    }
 
     if (root->val > val)
     {
-        TreeNode *left = deleteNode(root->left, val);
+        root->left = deleteNode(root->left, val);
     }
+    else if ((root->val < val))
+        root->right = deleteNode(root->right, val);
     else
-        TreeNode *right = deleteNode(root->right, val);
-
+    {
+    }
     return root;
 }

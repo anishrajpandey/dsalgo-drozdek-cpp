@@ -30,20 +30,19 @@ public:
 class BinarySearchTree
 {
 private:
-    Node *root; // Pointer to the root node of the tree
+    Node *root;
 
-    // Helper function for recursive insertion.
-    // Inserts a new node into the subtree rooted at 'root'.
     Node *insertHelper(Node *root, Node *node)
     {
-        int data = node->data;
-
         if (root == nullptr)
         {
             root = node;
-            return root;
+            return node;
         }
-        else if (data < root->data)
+
+        int data = node->data;
+
+        if (data < root->data)
         {
             root->left = insertHelper(root->left, node);
         }
@@ -51,6 +50,7 @@ private:
         {
             root->right = insertHelper(root->right, node);
         }
+
         return root;
     }
 
@@ -71,14 +71,11 @@ private:
     bool searchHelper(Node *root, int data)
     {
         if (root == nullptr)
-        {
             return false;
-        }
-        else if (root->data == data)
-        {
+        if (root->data == data)
             return true;
-        }
-        else if (root->data > data)
+
+        if (data < root->data)
         {
             return searchHelper(root->left, data);
         }
@@ -86,44 +83,14 @@ private:
         {
             return searchHelper(root->right, data);
         }
-    }
+        return false;
+    };
 
     // Helper function for recursive removal.
     // Removes a node with the specified data from the subtree rooted at 'root'.
     Node *removeHelper(Node *root, int data)
     {
-        if (root == nullptr)
-        {
-            return root;
         }
-        else if (data < root->data)
-        {
-            root->left = removeHelper(root->left, data);
-        }
-        else if (data > root->data)
-        {
-            root->right = removeHelper(root->right, data);
-        }
-        else
-        { // Node found
-            if (root->left == nullptr && root->right == nullptr)
-            {
-                delete root; // Free memory
-                root = nullptr;
-            }
-            else if (root->right != nullptr)
-            { // Find a successor to replace this node
-                root->data = successor(root);
-                root->right = removeHelper(root->right, root->data);
-            }
-            else
-            { // Find a predecessor to replace this node
-                root->data = predecessor(root);
-                root->left = removeHelper(root->left, root->data);
-            }
-        }
-        return root;
-    }
 
     // Finds the least value below the right child of this root node (successor).
     int successor(Node *root)
@@ -208,17 +175,8 @@ private:
     }
 };
 
-// --- Main Function Structure ---
-// The entry point of the program.
-// Demonstrates the usage of the BinarySearchTree class.
 int main()
 {
-    // Binary Search Tree = A tree data structure, where each node is greater than its left child,
-    //                      but less than its right.
-
-    // Benefit: easy to locate a node when they are in this order
-    // Time complexity: best case O(log n), worst case O(n)
-    // Space complexity: O(n)
 
     BinarySearchTree tree;
 
@@ -236,31 +194,31 @@ int main()
     tree.display();
     cout << "------------------------------------" << endl; // Changed std::cout to cout, std::endl to endl
 
-    cout << "Searching for 7: " << (tree.search(7) ? "Found" : "Not Found") << endl;   // Changed std::cout to cout, std::endl to endl
-    cout << "Searching for 10: " << (tree.search(10) ? "Found" : "Not Found") << endl; // Changed std::cout to cout, std::endl to endl
-    cout << "------------------------------------" << endl;                            // Changed std::cout to cout, std::endl to endl
+    // cout << "Searching for 7: " << (tree.search(7) ? "Found" : "Not Found") << endl;   // Changed std::cout to cout, std::endl to endl
+    // cout << "Searching for 10: " << (tree.search(10) ? "Found" : "Not Found") << endl; // Changed std::cout to cout, std::endl to endl
+    // cout << "------------------------------------" << endl;                            // Changed std::cout to cout, std::endl to endl
 
-    cout << "Removing 5 (root node):" << endl; // Changed std::cout to cout, std::endl to endl
-    tree.remove(5);
-    cout << "Displaying tree after removing 5:" << endl; // Changed std::cout to cout, std::endl to endl
-    tree.display();
-    cout << "------------------------------------" << endl; // Changed std::cout to cout, std::endl to endl
+    // cout << "Removing 5 (root node):" << endl; // Changed std::cout to cout, std::endl to endl
+    // tree.remove(5);
+    // cout << "Displaying tree after removing 5:" << endl; // Changed std::cout to cout, std::endl to endl
+    // tree.display();
+    // cout << "------------------------------------" << endl; // Changed std::cout to cout, std::endl to endl
 
-    cout << "Removing 1 (leaf node):" << endl; // Changed std::cout to cout, std::endl to endl
-    tree.remove(1);
-    cout << "Displaying tree after removing 1:" << endl; // Changed std::cout to cout, std::endl to endl
-    tree.display();
-    cout << "------------------------------------" << endl; // Changed std::cout to cout, std::endl to endl
+    // cout << "Removing 1 (leaf node):" << endl; // Changed std::cout to cout, std::endl to endl
+    // tree.remove(1);
+    // cout << "Displaying tree after removing 1:" << endl; // Changed std::cout to cout, std::endl to endl
+    // tree.display();
+    // cout << "------------------------------------" << endl; // Changed std::cout to cout, std::endl to endl
 
-    cout << "Removing 9 (node with one child):" << endl; // Changed std::cout to cout, std::endl to endl
-    tree.remove(9);
-    cout << "Displaying tree after removing 9:" << endl; // Changed std::cout to cout, std::endl to endl
-    tree.display();
-    cout << "------------------------------------" << endl; // Changed std::cout to cout, std::endl to endl
+    // cout << "Removing 9 (node with one child):" << endl; // Changed std::cout to cout, std::endl to endl
+    // tree.remove(9);
+    // cout << "Displaying tree after removing 9:" << endl; // Changed std::cout to cout, std::endl to endl
+    // tree.display();
+    // cout << "------------------------------------" << endl; // Changed std::cout to cout, std::endl to endl
 
-    cout << "Attempting to remove 100 (not found):" << endl; // Changed std::cout to cout, std::endl to endl
-    tree.remove(100);
-    cout << "------------------------------------" << endl; // Changed std::cout to cout, std::endl to endl
+    // cout << "Attempting to remove 100 (not found):" << endl; // Changed std::cout to cout, std::endl to endl
+    // tree.remove(100);
+    // cout << "------------------------------------" << endl; // Changed std::cout to cout, std::endl to endl
 
     return 0;
 }
